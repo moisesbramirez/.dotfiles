@@ -16,5 +16,9 @@ Plug('ii14/onedark.nvim')
 
 -- LSP
 Plug('neovim/nvim-lspconfig')
+Plug 'hrsh7th/cmp-nvim-lsp'
+Plug 'hrsh7th/cmp-buffer'
+Plug 'hrsh7th/cmp-path'
+Plug 'hrsh7th/nvim-cmp'
 
 vim.call('plug#end')
