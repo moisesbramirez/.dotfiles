@@ -11,5 +11,5 @@ require "moi.autocmds"
 -- require "moi.statusline"
 require "moi.treesitter"
 -- require "moi.formatting"
--- require "moi.lsp"
+require "moi.lsp"
 
