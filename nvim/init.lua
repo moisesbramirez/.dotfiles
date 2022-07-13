@@ -9,12 +9,7 @@ require "moi.autocmds"
 -- require "moi.folds"
 -- require "moi.filetree"
 -- require "moi.statusline"
--- require "moi.treesitter"
+require "moi.treesitter"
 -- require "moi.formatting"
 -- require "moi.lsp"
 
-require'nvim-treesitter.configs'.setup {
-  highlight = {
-    enable = true,
-  }
-}
