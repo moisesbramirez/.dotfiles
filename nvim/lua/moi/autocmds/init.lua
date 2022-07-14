@@ -6,3 +6,9 @@ autocmd("BufWritePre", {
   pattern = "*",
   command = "%s/\\s\\+$//e",
 })
+
+autocmd("BufWritePre", {
+  group = moi,
+  pattern = "*.ts,*.js",
+  command = "EslintFixAll",
+})

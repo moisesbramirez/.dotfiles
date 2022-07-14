@@ -16,7 +16,7 @@ local on_attach = function(client, bufnr)
   mapBuf(bufnr, "n", "<Leader>sd", "<cmd>lua vim.diagnostic.open_float(0, { scope = 'line' })<CR>")
 end
 
-local servers = { "ember" }
+local servers = { "ember", "eslint" }
 
 for _, lsp in ipairs(servers) do
   lspconfig[lsp].setup {
