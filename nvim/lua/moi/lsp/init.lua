@@ -24,3 +24,7 @@ for _, lsp in ipairs(servers) do
     -- capabilities = capabilities
   }
 end
+
+lspconfig.solargraph.setup {
+  filetypes = { "ruby", "rb", "t" },
+}
