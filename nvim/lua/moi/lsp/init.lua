@@ -26,5 +26,7 @@ for _, lsp in ipairs(servers) do
 end
 
 lspconfig.solargraph.setup {
-  filetypes = { "ruby", "rb", "t" },
+  cmd = {
+    "/Users/moises/.gem/ruby/2.6.0/gems/solargraph-0.45.0/bin/solargraph", "stdio",
+  },
 }

@@ -12,3 +12,9 @@ autocmd("BufWritePre", {
   pattern = "*.ts,*.js",
   command = "EslintFixAll",
 })
+
+autocmd("BufReadPost", {
+  group = moi,
+  pattern = "*.t",
+  command = "set filetype=ruby",
+})
