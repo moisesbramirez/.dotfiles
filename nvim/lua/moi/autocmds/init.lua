@@ -18,3 +18,10 @@ autocmd("BufReadPost", {
   pattern = "*.t",
   command = "set filetype=ruby",
 })
+
+autocmd("BufReadPost", {
+  group = moi,
+  pattern = "*.git/COMMIT_EDITMSG",
+  command = "set spell!",
+})
+
