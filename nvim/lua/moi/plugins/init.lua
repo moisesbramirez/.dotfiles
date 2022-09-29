@@ -12,7 +12,7 @@ Plug('nvim-lua/plenary.nvim')
 Plug('nvim-telescope/telescope.nvim')
 
 -- COLORS/THEMES
-Plug('ii14/onedark.nvim')
+Plug('folke/tokyonight.nvim', { branch = 'main' })
 
 -- LSP
 Plug('neovim/nvim-lspconfig')
