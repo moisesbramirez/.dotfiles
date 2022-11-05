@@ -27,6 +27,6 @@ end
 
 lspconfig.solargraph.setup {
   cmd = {
-    "/Users/moises/.gem/ruby/2.6.0/gems/solargraph-0.45.0/bin/solargraph", "stdio",
+    "/Users/moises/.gem/ruby/2.6.0/gems/solargraph-0.47.2/bin/solargraph", "stdio",
   },
 }
