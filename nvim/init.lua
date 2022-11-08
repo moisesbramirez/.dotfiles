@@ -4,6 +4,7 @@ require "moi.mappings"
 -- require "moi.commands"
 -- require "moi.completion"
 require "moi.colors"
+require "moi.telescope"
 
 require "moi.autocmds"
 -- require "moi.folds"
