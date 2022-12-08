@@ -1,8 +1,6 @@
 require("moi.plugins")
 require("moi.options")
 require("moi.mappings")
--- require("moi.commands")
--- require("moi.completion")
 require("moi.colors")
 require("moi.telescope")
 
