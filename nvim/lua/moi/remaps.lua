@@ -36,13 +36,6 @@ M.map("n", "<c-j>", ":wincmd j<CR>", { silent = true })
 M.map("n", "<c-h>", ":wincmd h<CR>", { silent = true })
 M.map("n", "<c-l>", ":wincmd l<CR>", { silent = true })
 
--- Telescope mappings
-M.map("n", "<Leader>ff", "<Cmd>lua require('telescope.builtin').git_files()<CR>")
-M.map("n", "<Leader>fg", "<Cmd>lua require('telescope.builtin').live_grep()<CR>")
-M.map("n", "<Leader>sg", "<Cmd>lua require('telescope.builtin').grep_string()<CR>")
-M.map("n", "<Leader>fb", "<Cmd>lua require('telescope.builtin').buffers()<CR>")
-M.map("n", "<Leader>xd", "<Cmd>lua require('telescope.builtin').diagnostics()<CR>")
-
 -- Run lazygit
 M.map("n", "<Leader>lg", "<Cmd>terminal lazygit<CR>")
 
