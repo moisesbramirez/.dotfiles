@@ -11,7 +11,8 @@ return {
       { "<leader><space>", "<cmd>Telescope git_files<cr>", desc = "Find Files (root dir)" },
       -- find
       { "<leader>fb", "<cmd>Telescope buffers<cr>", desc = "Buffers" },
-      { "<leader>ff", "<cmd>Telescope files<cr>", desc = "Find Files (root dir)" },
+      { "<leader>ff", "<cmd>Telescope find_files<cr>", desc = "Find Files (root dir)" },
+      { "<leader>fF", "<cmd>Telescope find_files hidden=true<cr>", desc = "Find ALL Files (root dir)" },
       -- search
       { "<leader>sa", "<cmd>Telescope autocommands<cr>", desc = "Auto Commands" },
       { "<leader>sb", "<cmd>Telescope current_buffer_fuzzy_find<cr>", desc = "Buffer" },
