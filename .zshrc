@@ -1,6 +1,8 @@
 source ~/.bash_profile
 
 # prompt
+source $(brew --prefix)/opt/zsh-vi-mode/share/zsh-vi-mode/zsh-vi-mode.plugin.zsh
+
 function git_branch_name()
 {
   branch=$(git rev-parse --abbrev-ref HEAD 2> /dev/null)
@@ -21,11 +23,3 @@ setopt HIST_IGNORE_SPACE
 
 # vim mode
 bindkey -v
-export KEYTIMEOUT=5
-
-#change cursor depending on insert/normal
-_fix_cursor() {
-   echo -ne '\e[5 q'
-}
-
-precmd_functions+=(_fix_cursor)
