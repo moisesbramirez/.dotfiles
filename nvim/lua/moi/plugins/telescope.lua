@@ -15,7 +15,7 @@ return {
       { "<leader>fF", "<cmd>Telescope find_files hidden=true<cr>", desc = "Find ALL Files (root dir)" },
       -- search
       { "<leader>sa", "<cmd>Telescope autocommands<cr>", desc = "Auto Commands" },
-      { "<leader>sb", "<cmd>Telescope current_buffer_fuzzy_find<cr>", desc = "Buffer" },
+      { "<leader>sb", "<cmd>Telescope current_buffer_fuzzy_find<cr>", desc = "Search in Buffer" },
       { "<leader>sC", "<cmd>Telescope commands<cr>", desc = "Commands" },
       { "<leader>sd", "<cmd>Telescope diagnostics<cr>", desc = "Diagnostics" },
       { "<leader>sh", "<cmd>Telescope help_tags<cr>", desc = "Help Pages" },
@@ -31,8 +31,11 @@ return {
     opts = {
       defaults = {
         layout_config = { prompt_position = "top" },
-        sorting_stategy = "ascending",
-      },
+        preview = { timeout = 300 },
+        prompt_prefix = "❯ ",
+        selection_caret = "❯ ",
+        sorting_strategy = "ascending",
+     },
     },
   },
   {
