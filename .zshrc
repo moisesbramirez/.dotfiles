@@ -20,6 +20,7 @@ prompt='%c:%B$(git_branch_name)%b: %n$ '
 setopt HIST_SAVE_NO_DUPS
 setopt HIST_IGNORE_ALL_DUPS
 setopt HIST_IGNORE_SPACE
+alias dotfiles='cd ~/dev/.dotfiles'
 
 # vim mode
 bindkey -v
