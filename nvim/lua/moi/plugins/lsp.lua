@@ -24,6 +24,7 @@ return {
       vim.opt.signcolumn = "yes"
       local lsp = require("lsp-zero")
       lsp.preset("recommended")
+      lsp.configure("stylelint_lsp", { filetypes = {"css", "less", "scss"} })
       lsp.setup()
 
       -- diagnostic config
