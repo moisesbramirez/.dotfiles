@@ -30,7 +30,8 @@ return {
     },
     opts = {
       defaults = {
-        layout_config = { prompt_position = "top" },
+        layout_strategy = "vertical",
+        layout_config = { prompt_position = "top", width = 0.95, height = 0.9 },
         preview = { timeout = 300 },
         prompt_prefix = "❯ ",
         selection_caret = "❯ ",
