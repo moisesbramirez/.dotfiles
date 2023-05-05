@@ -25,5 +25,3 @@ vim.opt.scrolloff = 12
 vim.opt.cmdheight = 1
 
 vim.g.mapleader = " "
-
-vim.o.clipboard = "unnamedplus"

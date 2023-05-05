@@ -15,21 +15,27 @@ vim.keymap.set("n", "<C-Left>", "<cmd>vertical resize -2<cr>", { desc = "Decreas
 vim.keymap.set("n", "<C-Right>", "<cmd>vertical resize +2<cr>", { desc = "Increase window width" })
 
 -- Move Lines
-vim.keymap.set("n", "<A-j>", "<cmd>m .+1<cr>==", { desc = "Move down" })
-vim.keymap.set("n", "<A-k>", "<cmd>m .-2<cr>==", { desc = "Move up" })
-vim.keymap.set("i", "<A-j>", "<esc><cmd>m .+1<cr>==gi", { desc = "Move down" })
-vim.keymap.set("i", "<A-k>", "<esc><cmd>m .-2<cr>==gi", { desc = "Move up" })
-vim.keymap.set("v", "<A-j>", ":m '>+1<cr>gv=gv", { desc = "Move down" })
-vim.keymap.set("v", "<A-k>", ":m '<-2<cr>gv=gv", { desc = "Move up" })
+vim.keymap.set("v", "J", ":m '>+1<cr>gv=gv", { desc = "Move selection down" })
+vim.keymap.set("v", "K", ":m '<-2<cr>gv=gv", { desc = "Move selection up" })
+
+-- Cursor positioning
+vim.keymap.set("n", "J", "mzJ`z", { desc = "Keep cursor inplace when pressing 'shift + j'"});
+vim.keymap.set("n", "<C-d>", "<C-d>zz", { desc = "Keep cursor center of page when page scrolling up"});
+vim.keymap.set("n", "<C-u>", "<C-u>zz", { desc = "Keep cursor center of page when page scrolling down"});
+vim.keymap.set("n", "n", "nzzzv", { desc = "Keep search terms center of page next"});
+vim.keymap.set("n", "N", "Nzzzv", { desc = "Keep search terms center of page previous"});
+
+-- Editing
+vim.keymap.set({"n", "v"}, "<leader>y", [["+y]], { desc = "Yank into systemp clipboard" })
+vim.keymap.set("n", "<leader>Y", [["+Y]], { desc = "Yank into systemp clipboard" })
+vim.keymap.set({"n", "v"}, "<leader>d", [["_d]], { desc = "Don't replace 'copy content' when replacing" })
+vim.keymap.set("n", "<leader>s", [[:%s/\<<C-r><C-w>\>/<C-r><C-w>/gI<Left><Left><Left>]], { desc = "Start search and replace on cursor" })
 
 -- better indenting
 vim.keymap.set("v", "<", "<gv")
 vim.keymap.set("v", ">", ">gv")
 
--- lazy
 vim.keymap.set("n", "<leader>l", "<cmd>:Lazy<cr>", { desc = "Lazy" })
-
--- new file
 vim.keymap.set("n", "<leader>fn", "<cmd>enew<cr>", { desc = "New File" })
 
 vim.keymap.set("n", "<leader>xl", "<cmd>lopen<cr>", { desc = "Location List" })
