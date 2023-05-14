@@ -32,6 +32,9 @@ return {
       defaults = {
         layout_strategy = "vertical",
         layout_config = { prompt_position = "top", width = 0.95, height = 0.9 },
+        mappings = {
+          n = { ["kj"] = "close" },
+        },
         preview = { timeout = 300 },
         prompt_prefix = "❯ ",
         selection_caret = "❯ ",

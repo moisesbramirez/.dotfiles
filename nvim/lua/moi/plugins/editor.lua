@@ -23,8 +23,12 @@ return {
         lualine_z = {}
       },
     },
-    config = function(_, opts)
-      require("lualine").setup(opts)
-    end,
+  },
+  {
+    "max397574/better-escape.nvim",
+    opts = {
+      mapping = { "kj" },
+      clear_empty_lines = true,
+    },
   },
 }
