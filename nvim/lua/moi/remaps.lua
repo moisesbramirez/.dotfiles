@@ -31,6 +31,7 @@ vim.keymap.set("n", "<leader>Y", [["+Y]], { desc = "Yank into systemp clipboard"
 vim.keymap.set({"n", "v"}, "<leader>d", [["_d]], { desc = "Don't replace 'copy content' when replacing" })
 vim.keymap.set("n", "<leader>s", [[:%s/\<<C-r><C-w>\>/<C-r><C-w>/gI<Left><Left><Left>]], { desc = "Start search and replace on cursor" })
 vim.keymap.set("n", "<leader>o", [[<cmd>:%bd|e#|bd#<cr>]], { desc = "Kill all other buffers" })
+vim.keymap.set("n", "<leader>zz", [[<cmd>:w|bd<cr>]], { desc = "Write and kill buffer" })
 
 -- better indenting
 vim.keymap.set("v", "<", "<gv")
