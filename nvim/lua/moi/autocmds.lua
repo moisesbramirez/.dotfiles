@@ -25,3 +25,10 @@ autocmd("BufReadPost", {
   command = "set spell!",
 })
 
+autocmd({ "WinEnter", "BufWinEnter", "TermOpen" }, {
+  callback = function(args)
+    if vim.startswith(vim.api.nvim_buf_get_name(args.buf), "term://") then
+      vim.cmd("startinsert")
+    end
+  end,
+})

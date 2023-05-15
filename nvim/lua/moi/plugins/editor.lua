@@ -31,4 +31,34 @@ return {
       clear_empty_lines = true,
     },
   },
+  {
+    "rebelot/terminal.nvim",
+    opts = {
+      layout = {
+        open_cmd = "float",
+        width = 0.95,
+        height = 0.9,
+      }
+    },
+    config = function(_, opts)
+      require("terminal").setup(opts)
+
+      local lazygit = require("terminal").terminal:new({
+        cmd = { "lazygit" },
+        autoclose = true,
+      })
+
+      vim.env["GIT_EDITOR"] = "nvr -cc close -cc vsplit --remote-wait +'set bufhidden=wipe'"
+      vim.api.nvim_create_user_command("Lazygit", function(args)
+        lazygit.cwd = args.args and vim.fn.expand(args.args)
+        lazygit:toggle(nil, true)
+      end, { nargs = "?" })
+
+      vim.api.nvim_set_keymap("n", "<leader>gl", "<cmd>Lazygit<cr>", {
+        desc = "Open lazygit",
+        noremap = true,
+        silent = true
+      })
+   end
+  },
 }
