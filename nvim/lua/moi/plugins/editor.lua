@@ -54,11 +54,14 @@ return {
         lazygit:toggle(nil, true)
       end, { nargs = "?" })
 
-      vim.api.nvim_set_keymap("n", "<leader>gl", "<cmd>Lazygit<cr>", {
+      vim.keymap.set("n", "<leader>gl", "<cmd>Lazygit<cr>", {
         desc = "Open lazygit",
         noremap = true,
         silent = true
       })
+
+      local term_map = require("terminal.mappings")
+      vim.keymap.set("n", "<leader>to", term_map.toggle, { desc = "Terminal Open" })
    end
   },
 }
