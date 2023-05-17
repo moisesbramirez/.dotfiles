@@ -10,9 +10,7 @@ return {
       { "<leader>:", "<cmd>Telescope command_history<cr>", desc = "Command History" },
       { "<leader><space>", "<cmd>Telescope git_files<cr>", desc = "Find Files (root dir)" },
       -- find
-      { "<leader>fb", "<cmd>Telescope buffers<cr>", desc = "Buffers" },
-      { "<leader>ff", "<cmd>Telescope find_files<cr>", desc = "Find Files (root dir)" },
-      { "<leader>fF", "<cmd>Telescope find_files hidden=true<cr>", desc = "Find ALL Files (root dir)" },
+      { "<leader>ff", "<cmd>Telescope find_files hidden=true<cr>", desc = "Find ALL Files (root dir)" },
       -- search
       { "<leader>sa", "<cmd>Telescope autocommands<cr>", desc = "Auto Commands" },
       { "<leader>sb", "<cmd>Telescope current_buffer_fuzzy_find<cr>", desc = "Search in Buffer" },
@@ -21,11 +19,9 @@ return {
       { "<leader>sh", "<cmd>Telescope help_tags<cr>", desc = "Help Pages" },
       { "<leader>sH", "<cmd>Telescope highlights<cr>", desc = "Search Highlight Groups" },
       { "<leader>sk", "<cmd>Telescope keymaps<cr>", desc = "Key Maps" },
-      { "<leader>sM", "<cmd>Telescope man_pages<cr>", desc = "Man Pages" },
-      { "<leader>sm", "<cmd>Telescope marks<cr>", desc = "Jump to Mark" },
+      { "<leader>sm", "<cmd>Telescope man_pages<cr>", desc = "Man Pages" },
       { "<leader>so", "<cmd>Telescope vim_options<cr>", desc = "Options" },
       { "<leader>sw", "<cmd>Telescope grep_string<cr>", desc = "Word (root dir)" },
-      { "<leader>uC", "<cmd>lua require('telescope.builtin').colorscheme({ enable_preview = true })<cr>", desc = "Colorscheme with preview" },
       { "<leader>ss", "<cmd>lua require('telescope.builtin').lsp_document_symbols({ symbols = { 'Class', 'Function', 'Method', 'Constructor', 'Interface', 'Module', 'Struct', 'Trait', 'Field', 'Property' } })<cr>", desc = "Goto Symbol" },
     },
     opts = {
