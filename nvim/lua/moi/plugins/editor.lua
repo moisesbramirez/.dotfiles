@@ -73,9 +73,7 @@ return {
       },
       mappings = {
         enabled = true,
-        toggle = "<leader>np",
-        widthUp = "<leader>nj",
-        widthDown = "<leader>nk",
+        toggle = "<Leader>np",
         scratchPad = false,
       },
       buffers = {
