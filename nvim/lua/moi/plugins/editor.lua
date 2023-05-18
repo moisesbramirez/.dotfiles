@@ -59,9 +59,6 @@ return {
         noremap = true,
         silent = true
       })
-
-      local term_map = require("terminal.mappings")
-      vim.keymap.set("n", "<leader>to", term_map.toggle, { desc = "Terminal Open" })
    end
   },
   {

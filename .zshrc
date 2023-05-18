@@ -17,6 +17,8 @@ function git_branch_name()
 setopt prompt_subst
 prompt='%c:%B$(git_branch_name)%b: %n$ '
 
+setopt APPEND_HISTORY
+setopt INC_APPEND_HISTORY
 setopt HIST_SAVE_NO_DUPS
 setopt HIST_IGNORE_ALL_DUPS
 setopt HIST_IGNORE_SPACE
@@ -24,3 +26,5 @@ alias dotfiles='cd ~/dev/.dotfiles'
 
 # vim mode
 bindkey -v
+
+export LG_CONFIG_FILE="$HOME/dev/.dotfiles/.lazygit_config"
