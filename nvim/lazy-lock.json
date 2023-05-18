@@ -15,6 +15,7 @@
   "lualine.nvim": { "branch": "master", "commit": "05d78e9fd0cdfb4545974a5aa14b1be95a86e9c9" },
   "mason-lspconfig.nvim": { "branch": "main", "commit": "90a8bbf106b85b76951a34c542058ffa807de2b1" },
   "mason.nvim": { "branch": "main", "commit": "a51391311e86c295fc7611be2beb58859e93f21b" },
+  "no-neck-pain.nvim": { "branch": "main", "commit": "d3527936c4944baf0227c4f5b7fd64e7119ac13c" },
   "nvim-cmp": { "branch": "main", "commit": "935b4069ce73b60ba9075bf05ee6ab50ed3af1a9" },
   "nvim-lspconfig": { "branch": "master", "commit": "84717430fb6f51c9e9cc8d63da10cceafc91500c" },
   "nvim-treesitter": { "branch": "master", "commit": "73c7af9cdbce9330eeb9771639c86269f6d7cf9d" },

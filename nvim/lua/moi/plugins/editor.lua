@@ -64,4 +64,26 @@ return {
       vim.keymap.set("n", "<leader>to", term_map.toggle, { desc = "Terminal Open" })
    end
   },
+  {
+    "shortcuts/no-neck-pain.nvim",
+    version = "*",
+    opts = {
+      width = 140,
+      disableOnLastBuffer = true,
+      autocmds = {
+        enableOnVimEnter = true,
+        reloadOnColorSchemeChange = true,
+      },
+      mappings = {
+        enabled = true,
+        toggle = "<leader>np",
+        widthUp = "<leader>nj",
+        widthDown = "<leader>nk",
+        scratchPad = false,
+      },
+      buffers = {
+        right = { enabled = false },
+      },
+    },
+  },
 }
