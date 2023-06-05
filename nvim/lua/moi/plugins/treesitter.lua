@@ -15,6 +15,9 @@ return {
       ensure_installed = {
         "bash",
         "css",
+        "git_config",
+        "gitcommit",
+        "gitignore",
         "glimmer",
         "go",
         "help",
