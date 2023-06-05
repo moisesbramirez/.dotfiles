@@ -1,5 +1,17 @@
 return {
   {
+    "nvim-treesitter/nvim-treesitter-context",
+    dependencies = {
+      {"nvim-treesitter/nvim-treesitter"},
+    }
+  },
+  {
+    "nvim-treesitter/nvim-treesitter-textobjects",
+    dependencies = {
+      {"nvim-treesitter/nvim-treesitter"},
+    }
+  },
+  {
     "nvim-treesitter/nvim-treesitter",
     version = false, -- last release is way too old and doesn't work on Windows
     build = ":TSUpdate",
@@ -44,21 +56,14 @@ return {
           node_decremental = "<bs>",
         },
       },
+      textobjects = {
+        move = { enable = true },
+        select = { enable = true },
+        swap = { enable = true },
+      },
     },
     config = function(_, opts)
       require("nvim-treesitter.configs").setup(opts)
     end,
-  },
-  {
-    "nvim-treesitter/nvim-treesitter-context",
-    dependencies = {
-      {"nvim-treesitter/nvim-treesitter"},
-    }
-  },
-  {
-    "nvim-treesitter/nvim-treesitter-textobjects",
-    dependencies = {
-      {"nvim-treesitter/nvim-treesitter"},
-    }
   },
 }
