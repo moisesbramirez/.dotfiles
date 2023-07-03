@@ -31,13 +31,6 @@ return {
     },
   },
   {
-    "max397574/better-escape.nvim",
-    opts = {
-      mapping = { "kj" },
-      clear_empty_lines = true,
-    },
-  },
-  {
     "rebelot/terminal.nvim",
     opts = {
       layout = {
