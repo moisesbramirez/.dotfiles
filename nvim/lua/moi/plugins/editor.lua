@@ -72,7 +72,6 @@ return {
       },
       mappings = {
         enabled = true,
-        toggle = "<Leader>np",
         scratchPad = false,
       },
       buffers = {
