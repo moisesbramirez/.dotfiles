@@ -14,6 +14,7 @@ return {
       -- search
       { "<leader>sa", "<cmd>Telescope autocommands<cr>", desc = "Auto Commands" },
       { "<leader>sb", "<cmd>Telescope current_buffer_fuzzy_find<cr>", desc = "Search in Buffer" },
+      { "<leader>sg", "<cmd>Telescope ast_grep<cr>", desc = "Search via ast-grep" },
       { "<leader>sC", "<cmd>Telescope commands<cr>", desc = "Commands" },
       { "<leader>sd", "<cmd>Telescope diagnostics<cr>", desc = "Diagnostics" },
       { "<leader>sh", "<cmd>Telescope help_tags<cr>", desc = "Help Pages" },
@@ -55,4 +56,10 @@ return {
       require("telescope").load_extension("fzf")
     end,
   },
+  {
+    "Marskey/telescope-sg",
+    config = function()
+      require("telescope").load_extension("ast_grep")
+    end,
+  }
 }
