@@ -30,6 +30,7 @@ return {
         file_ignore_patterns = {
           ".*.min.js",
           ".*/vendor/.*",
+          "*.har",
         },
         layout_strategy = "vertical",
         layout_config = { prompt_position = "top", width = 0.95, height = 0.9 },

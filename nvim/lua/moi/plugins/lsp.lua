@@ -27,28 +27,34 @@ return {
       lsp.configure("stylelint_lsp", { filetypes = {"css", "less", "scss"} })
       lsp.setup()
 
+      local signs = { Error = "E", Warn = "W", Hint = "H", Info = "I" }
+      for type, icon in pairs(signs) do
+        local hl = "DiagnosticSign" .. type
+        vim.fn.sign_define(hl, { text = icon, texthl = hl, numhl = "" })
+      end
+
       -- diagnostic config
       vim.diagnostic.config({
-        virtual_text = true,
+        severity_sort = true,
         signs = true,
-        update_in_insert = false,
         underline = true,
-        severity_sort = false,
+        update_in_insert = false,
+        virtual_text = false,
         float = {
-          focusable = false,
-          style = "minimal",
-          border = "",
-          source = "always",
+          focusable = true,
           header = "",
-          prefix = "",
+          scope = "cursor",
+          severity_sort = true,
+          show_header = false,
+          source = "in_many",
+          style = "minimal",
+          width = 80,
         },
       })
     end,
   },
   {
     "j-hui/fidget.nvim",
-    config = function()
-      require("fidget").setup({})
-    end,
+    opts = {},
   },
 }

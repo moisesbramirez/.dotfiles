@@ -9,10 +9,10 @@ vim.keymap.set("n", "<C-k>", "<C-w>k", { desc = "Go to upper window" })
 vim.keymap.set("n", "<C-l>", "<C-w>l", { desc = "Go to right window" })
 
 -- Resize window using
-vim.keymap.set("n", "<A-j>", "<cmd>resize +2<cr>", { desc = "Increase window height" })
-vim.keymap.set("n", "<A-k>", "<cmd>resize -2<cr>", { desc = "Decrease window height" })
-vim.keymap.set("n", "<A-h>", "<cmd>vertical resize -2<cr>", { desc = "Decrease window width" })
-vim.keymap.set("n", "<A-l>", "<cmd>vertical resize +2<cr>", { desc = "Increase window width" })
+vim.keymap.set("n", "<A-j>", "<cmd>resize +5<cr>", { desc = "Increase window height" })
+vim.keymap.set("n", "<A-k>", "<cmd>resize -5<cr>", { desc = "Decrease window height" })
+vim.keymap.set("n", "<A-h>", "<cmd>vertical resize -5<cr>", { desc = "Decrease window width" })
+vim.keymap.set("n", "<A-l>", "<cmd>vertical resize +5<cr>", { desc = "Increase window width" })
 
 -- Move Lines
 vim.keymap.set("v", "J", ":m '>+1<cr>gv=gv", { desc = "Move selection down" })
@@ -27,12 +27,14 @@ vim.keymap.set("n", "N", "Nzzzv", { desc = "Keep search terms center of page pre
 
 -- Editing
 vim.keymap.set({"n", "v"}, "<leader>y", [["+y]], { desc = "Yank into systemp clipboard" })
-vim.keymap.set("n", "<leader>Y", [["+Y]], { desc = "Yank into systemp clipboard" })
 vim.keymap.set({"n", "v"}, "<leader>d", [["_d]], { desc = "Don't replace 'copy content' when replacing" })
 vim.keymap.set("n", "<leader>sr", [[:%s/\<<C-r><C-w>\>/<C-r><C-w>/gI<Left><Left><Left>]], { desc = "Start search and replace on cursor" })
 vim.keymap.set("n", "<leader>o", [[<cmd>:w|%bdelete|edit#|bdelete#|'"|set rnu|set nu<cr>]], { desc = "Kill all other buffers" })
 vim.keymap.set("n", "<leader>zz", [[<cmd>:w|bd<cr>]], { desc = "Write and kill buffer" })
 vim.keymap.set("n", "<leader>dp", [[:sav %:h/]], { desc = "Save current buffer as (Duplicate into new file)" })
+vim.keymap.set({ "n", "v" }, "<leader>d", vim.diagnostic.open_float, { desc = "Open diagnostic float" })
+vim.keymap.set({ "n", "v" }, "<leader>dp", vim.diagnostic.goto_prev, { desc = "Go to previous diagnostic" })
+vim.keymap.set({ "n", "v" }, "<leader>dn", vim.diagnostic.goto_next, { desc = "Go to next diagnostic" })
 
 -- better indenting
 vim.keymap.set("v", "<", "<gv")
