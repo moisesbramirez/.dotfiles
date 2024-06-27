@@ -17,12 +17,29 @@ function git_branch_name()
 setopt prompt_subst
 prompt='%c:%B$(git_branch_name)%b: %n$ '
 
-setopt APPEND_HISTORY
+HISTSIZE=10000000
+SAVEHIST=10000000
+
+HISTORY_IGNORE="(ls|cd|pwd|exit|cd|nvim|lazygit|storenet|dev|dot|pv|dt|sn)*"
+
+setopt EXTENDED_HISTORY
 setopt INC_APPEND_HISTORY
-setopt HIST_SAVE_NO_DUPS
+setopt SHARE_HISTORY
+setopt HIST_IGNORE_DUPS
 setopt HIST_IGNORE_ALL_DUPS
 setopt HIST_IGNORE_SPACE
-alias dotfiles='cd ~/dev/.dotfiles'
+setopt HIST_SAVE_NO_DUPS
+setopt HIST_VERIFY
+setopt APPEND_HISTORY
+setopt HIST_NO_STORE
+setopt HIST_REDUCE_BLANKS
+HIST_STAMPS="yyyy-mm-dd"
+
+alias dev='cd ~/dev'
+alias dot='cd ~/dev/.dotfiles'
+alias pv='cd ~/dev/providence'
+alias dt='cd ~/dev/devtools && rbenv global system'
+alias sn='cd ~/dev/storenet && rbenv global 3.3.0'
 
 # vim mode
 bindkey -v
@@ -31,5 +48,7 @@ export LG_CONFIG_FILE="$HOME/dev/.dotfiles/.lazygit_config"
 
 export PUPPETEER_SKIP_CHROMIUM_DOWNLOAD=true
 export PUPPETEER_EXECUTABLE_PATH=`which chromium`
+export GRIT_TELEMETRY_DISABLED=true
 
+source <(fzf --zsh)
 eval "$(rbenv init - zsh)"
