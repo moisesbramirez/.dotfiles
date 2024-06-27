@@ -12,17 +12,14 @@ return {
       -- find
       { "<leader>ff", "<cmd>Telescope find_files hidden=true<cr>", desc = "Find ALL Files (root dir)" },
       -- search
-      { "<leader>sa", "<cmd>Telescope autocommands<cr>", desc = "Auto Commands" },
       { "<leader>sb", "<cmd>Telescope current_buffer_fuzzy_find<cr>", desc = "Search in Buffer" },
-      { "<leader>sg", "<cmd>Telescope ast_grep<cr>", desc = "Search via ast-grep" },
-      { "<leader>sC", "<cmd>Telescope commands<cr>", desc = "Commands" },
       { "<leader>sd", "<cmd>Telescope diagnostics<cr>", desc = "Diagnostics" },
       { "<leader>sh", "<cmd>Telescope help_tags<cr>", desc = "Help Pages" },
-      { "<leader>sH", "<cmd>Telescope highlights<cr>", desc = "Search Highlight Groups" },
       { "<leader>sk", "<cmd>Telescope keymaps<cr>", desc = "Key Maps" },
       { "<leader>sm", "<cmd>Telescope man_pages<cr>", desc = "Man Pages" },
-      { "<leader>so", "<cmd>Telescope vim_options<cr>", desc = "Options" },
       { "<leader>sw", "<cmd>Telescope grep_string<cr>", desc = "Word (root dir)" },
+      { "<leader>sp", "<cmd>Telescope spell_suggest<cr>", desc = "Spell Suggestions" },
+      { "<leader>s'", "<cmd>Telescope registers<cr>", desc = "" },
       { "<leader>ss", "<cmd>lua require('telescope.builtin').lsp_document_symbols({ symbols = { 'Class', 'Function', 'Method', 'Constructor', 'Interface', 'Module', 'Struct', 'Trait', 'Field', 'Property' } })<cr>", desc = "Goto Symbol" },
     },
     opts = {

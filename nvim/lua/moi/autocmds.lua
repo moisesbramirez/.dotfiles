@@ -9,7 +9,7 @@ autocmd("BufWritePre", {
 
 autocmd("BufWritePre", {
   group = moi,
-  pattern = "*.ts,*.js",
+  pattern = "*.ts,*.js,*.mjs,*.cjs",
   command = "EslintFixAll",
 })
 
