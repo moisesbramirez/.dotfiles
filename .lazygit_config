@@ -3,3 +3,6 @@ os:
   editAtLine: "nvr -cc close --remote-silent +'set bufhidden=wipe' +{{line}} -- {{filename}}"
   editAtLineAndWait: "nvr -cc close --remote-wait +'set bufhidden=wipe' +{{line}} -- {{filename}}"
   editInTerminal: true
+_git:
+  paging:
+    externalDiffCommand: difft --display=inline

@@ -12,7 +12,7 @@ return {
       -- find
       { "<leader>ff", "<cmd>Telescope find_files hidden=true<cr>", desc = "Find ALL Files (root dir)" },
       -- search
-      { "<leader>sb", "<cmd>Telescope current_buffer_fuzzy_find<cr>", desc = "Search in Buffer" },
+      { "<leader>sb", "<cmd>Telescope currentkbuffer_fuzzy_find<cr>", desc = "Search in Buffer" },
       { "<leader>sd", "<cmd>Telescope diagnostics<cr>", desc = "Diagnostics" },
       { "<leader>sh", "<cmd>Telescope help_tags<cr>", desc = "Help Pages" },
       { "<leader>sk", "<cmd>Telescope keymaps<cr>", desc = "Key Maps" },
@@ -21,6 +21,7 @@ return {
       { "<leader>sp", "<cmd>Telescope spell_suggest<cr>", desc = "Spell Suggestions" },
       { "<leader>s'", "<cmd>Telescope registers<cr>", desc = "" },
       { "<leader>ss", "<cmd>lua require('telescope.builtin').lsp_document_symbols({ symbols = { 'Class', 'Function', 'Method', 'Constructor', 'Interface', 'Module', 'Struct', 'Trait', 'Field', 'Property' } })<cr>", desc = "Goto Symbol" },
+      { "<leader>gr", "<cmd>Telescope lsp_references<cr>", desc = "Goto References" },
     },
     opts = {
       defaults = {
@@ -28,6 +29,7 @@ return {
           ".*.min.js",
           ".*/vendor/.*",
           "*.har",
+          ".*/smartops/recordings/.*",
         },
         layout_strategy = "vertical",
         layout_config = { prompt_position = "top", width = 0.95, height = 0.9 },

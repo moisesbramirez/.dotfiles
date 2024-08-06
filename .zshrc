@@ -52,3 +52,5 @@ export GRIT_TELEMETRY_DISABLED=true
 
 source <(fzf --zsh)
 eval "$(rbenv init - zsh)"
+
+. "/opt/homebrew/lib/node_modules/@getgrit/cli/node_modules/bin/env"
