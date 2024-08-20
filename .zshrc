@@ -3,20 +3,6 @@ source ~/.bash_profile
 # prompt
 source $(brew --prefix)/opt/zsh-vi-mode/share/zsh-vi-mode/zsh-vi-mode.plugin.zsh
 
-function git_branch_name()
-{
-  branch=$(git rev-parse --abbrev-ref HEAD 2> /dev/null)
-  if [[ $branch == "" ]];
-  then
-    :
-  else
-    echo $branch
-  fi
-}
-
-setopt prompt_subst
-prompt='%c:%B$(git_branch_name)%b: %n$ '
-
 HISTSIZE=10000000
 SAVEHIST=10000000
 
@@ -51,6 +37,23 @@ export PUPPETEER_EXECUTABLE_PATH=`which chromium`
 export GRIT_TELEMETRY_DISABLED=true
 
 source <(fzf --zsh)
+
 eval "$(rbenv init - zsh)"
+# Check that the function `starship_zle-keymap-select()` is defined.
+# xref: https://github.com/starship/starship/issues/3418
+type starship_zle-keymap-select > /dev/null || \
+{
+  echo "Load starship"
+  eval "$(starship init zsh)"
+}
+
+
+source $(brew --prefix)/share/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
+
+(( ${+ZSH_HIGHLIGHT_STYLES} )) || typeset -A ZSH_HIGHLIGHT_STYLES
+ZSH_HIGHLIGHT_STYLES[path]=none
+ZSH_HIGHLIGHT_STYLES[path_prefix]=none
+
+source $(brew --prefix)/share/zsh-autosuggestions/zsh-autosuggestions.zsh
 
 . "/opt/homebrew/lib/node_modules/@getgrit/cli/node_modules/bin/env"
